@@ -25,16 +25,16 @@ get "/:operation/:number1/:number2" do
 
 @number1 =  params[:number1].to_1
 @number2 =  params[:number2].to_i
- if params[:operation] = "add"
+ when params[:operation] = "add"
    (@number1 + @number2).to_s
 end
-if params[:operation] = "subtract"
+when params[:operation] = "subtract"
   (@number1 - @number2).to_s
 end
-if params[:operation] = "multiply"
+when params[:operation] = "multiply"
   (@number1 * @number2).to_s
 end
-if params[:operation] = "divide"
+when params[:operation] = "divide"
   (@number1 / @number2).to_s
 end
 end
