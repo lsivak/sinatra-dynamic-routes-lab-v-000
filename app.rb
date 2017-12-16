@@ -18,11 +18,11 @@ class App < Sinatra::Base
 end
 get "/say/:word1/:word2/:word3/:word4/:word5" do
   @sayagain = params[:word1], params[:word2], params[:word3], params[:word4], params[:word5]
-  "#{@sayagain}.join"
+  "#{@sayagain}"
 end
 
 get "/:operation/:number1/:number2" do
-@result = "params[:number1].to_i%20params[:operation]%20params[:number2].to_i"
+@result = "params[:number1].to_1, params[:operation], params[:number2].to_i"
 "#{@result}"
 end
 end
