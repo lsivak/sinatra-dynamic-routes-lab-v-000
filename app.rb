@@ -17,12 +17,12 @@ class App < Sinatra::Base
     "#{@say}"
 end
 get "/say/:word1/:word2/:word3/:word4/:word5" do
-  @sayagain = params[:word1].to_s + params[:word2].to_s + params[:word3].to_s + params[:word4].to_s + params[:word5].to_s
+  @sayagain = params[:word1].to_s%20params[:word2].to_s%20params[:word3].to_s%20params[:word4].to_s%20params[:word5].to_s
   "#{@sayagain}"
 end
 
 get "/:operation/:number1/:number2" do
-@result = "params[:number1].to_i, params[:operation], params[:number2].to_i"
+@result = "params[:number1].to_i%20params[:operation]%20params[:number2].to_i"
 "#{@result}"
 end
 end
