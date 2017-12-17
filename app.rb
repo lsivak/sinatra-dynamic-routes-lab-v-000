@@ -23,19 +23,19 @@ end
 
 get "/:operation/:number1/:number2" do
 
-@number1 =  params[:number1].to_1
-@number2 =  params[:number2].to_i
-@operation = params[:operation]
+@n1 =  params[:number1].to_1
+@n2 =  params[:number2].to_i
+@op = params[:operation]
 
-case @operation
+case @op
  when "add"
-   (@number1 + @number2).to_s
+   (@n1 + @n2).to_s
 when "subtract"
-  (@number1 - @number2).to_s
+  (@n1 - @n2).to_s
 when "multiply"
-  (@number1 * @number2).to_s
+  (@n1 * @n2).to_s
 when "divide"
-  (@number1 / @number2).to_s
+  (@n1 / @n2).to_s
 end
 end
 end
