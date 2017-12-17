@@ -23,11 +23,11 @@ end
 
 get "/:operation/:number1/:number2" do
 
-@op = params[:operation]
+
 @n1 =  params[:number1].to_1
 @n2 =  params[:number2].to_i
 
-case @op
+case params[:operation]
 when "add"
    (@n1 + @n2).to_s
 when "subtract"
