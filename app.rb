@@ -26,16 +26,17 @@ get "/:operation/:number1/:number2" do
 @number1 =  params[:number1].to_1
 @number2 =  params[:number2].to_i
 @operation = params[:operation]
- when @operations = "add"
+case @operation
+ when @operation = "add"
    (@number1 + @number2).to_s
 when
-  @operations = "subtract"
+  @operation = "subtract"
   (@number1 - @number2).to_s
 when
-  @operations = "multiply"
+  @operation = "multiply"
   (@number1 * @number2).to_s
 when
-  @operations = "divide"
+  @operation = "divide"
   (@number1 / @number2).to_s
 end
 end
