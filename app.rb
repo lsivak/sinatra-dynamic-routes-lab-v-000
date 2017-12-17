@@ -29,13 +29,13 @@ get "/:operation/:number1/:number2" do
 
 case params[:operation]
 when "add"
-  result = (@n1 + @n2).to_s
+  (@n1 + @n2).to_s
 when "subtract"
-  result = (@n1 - @n2).to_s
+  (@n1 - @n2).to_s
 when "multiply"
-  result = (@n1 * @n2).to_s
+  (@n1 * @n2).to_s
 when "divide"
-  result = (@n1 / @n2).to_s
+  (@n1 / @n2).to_s
 end
 end
 end
