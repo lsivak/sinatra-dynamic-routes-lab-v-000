@@ -24,7 +24,7 @@ end
 get "/:operation/:number1/:number2" do
 
 
-@n1 =  params[:number1].to_1
+@n1 =  params[:number1].to_i
 @n2 =  params[:number2].to_i
 
 case params[:operation]
