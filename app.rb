@@ -29,13 +29,16 @@ get "/:operation/:number1/:number2" do
  when @operations = "add"
    (@number1 + @number2).to_s
 end
-when @operations = "subtract"
+when 
+  @operations = "subtract"
   (@number1 - @number2).to_s
 end
-when @operations = "multiply"
+when 
+  @operations = "multiply"
   (@number1 * @number2).to_s
 end
-when @operations = "divide"
+when 
+  @operations = "divide"
   (@number1 / @number2).to_s
 end
 end
